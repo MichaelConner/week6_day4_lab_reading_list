@@ -6,21 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById(selector).reset();
 })
 
-
-
 const handleFormSubmit = function (event) {
   // console.log(event);
   event.preventDefault();
 
   const formResultDiv = document.querySelector('#reading-list')
-    createListItem(event)
+    formResultDiv.appendChild(newBookItem(event))
 }
 
-const createListItem = function () {
-
-formResultParagraph = `
-Title: ${event.target.title.value}
-Author: ${event.target.author.value}
-Category: ${event.target.category.value}`
-
+const newBookItem = function (event) {
+  document.createElement('p')
+  newBookItem.textContent =
+  `Title: ${event.target.title.value}
+  Author: ${event.target.author.value}
+  Category: ${event.target.category.value}`
 }
